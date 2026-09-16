@@ -4,22 +4,12 @@
     "slug": "party-kingdom-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/logo.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./src/assets/logo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#5C2D91"
-    },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.partykingdomchino.app"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./src/assets/logo.png",
-        "backgroundColor": "#5C2D91"
-      },
       "package": "com.partykingdomchino.app"
     }
   }
