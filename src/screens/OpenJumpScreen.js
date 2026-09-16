@@ -3,14 +3,13 @@ import { View, Text, ScrollView, Image, StyleSheet, Modal } from 'react-native';
 import { colors, radius } from '../theme/colors';
 import { PageHeader, PrimaryButton, Card, ReminderCard } from '../components/UI';
 import LilyPadWebView from '../components/LilyPadWebView';
+import { BANNER_DATA_URI } from '../assets/imageData';
 
 // Real LilyPad ticketing URL for Party Kingdom's Open Jump — confirm the
 // exact path against the "Buy Tickets" link on partykingdomchino.com/openjump
 // before shipping; LilyPad sometimes rotates these paths.
 const OPEN_JUMP_TICKETS_URL =
   'https://lilypadpos9.com/partykingdom/onlinesales/tickets1.php';
-
-const jumpBanner = require('../assets/jump-banner.jpg');
 
 export default function OpenJumpScreen({ navigation }) {
   const [showTickets, setShowTickets] = useState(false);
@@ -19,7 +18,7 @@ export default function OpenJumpScreen({ navigation }) {
     <View style={{ flex: 1, backgroundColor: colors.mist }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 40 }}>
         <PageHeader eyebrow="Drop-in play" title="Open Jump" onBack={() => navigation.goBack()} />
-        <Image source={jumpBanner} style={styles.banner} resizeMode="cover" />
+        <Image source={{ uri: BANNER_DATA_URI }} style={styles.banner} resizeMode="cover" />
 
         <View style={styles.content}>
           <Text style={styles.intro}>
@@ -116,7 +115,7 @@ const styles = StyleSheet.create({
   banner: { width: '100%', height: 130 },
   content: { padding: 20 },
   intro: { fontSize: 13, color: colors.textBody, fontWeight: '600', lineHeight: 20, marginBottom: 6 },
-  h3: { fontFamily: undefined, fontWeight: '700', fontSize: 16, color: colors.ink, marginTop: 20, marginBottom: 8 },
+  h3: { fontWeight: '700', fontSize: 16, color: colors.ink, marginTop: 20, marginBottom: 8 },
   hoursGrid: { gap: 4 },
   hourRow: { flexDirection: 'row', justifyContent: 'space-between' },
   hourLabel: { fontSize: 12.5, color: colors.textMuted, fontWeight: '700' },

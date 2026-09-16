@@ -10,8 +10,7 @@ import {
 } from 'react-native';
 import { colors, radius } from '../theme/colors';
 import { PrimaryButton, ReminderCard } from '../components/UI';
-
-const logo = require('../assets/logo.png');
+import { LOGO_DATA_URI } from '../assets/imageData';
 
 const EXPLORE_ITEMS = [
   { key: 'OpenJump', emoji: '🤾', name: 'Open Jump', desc: 'Drop-in play' },
@@ -25,7 +24,7 @@ export default function HomeScreen({ navigation }) {
   return (
     <ScrollView style={styles.screen} contentContainerStyle={{ paddingBottom: 40 }}>
       <View style={styles.header}>
-        <Image source={logo} style={styles.logo} resizeMode="contain" />
+        <Image source={{ uri: LOGO_DATA_URI }} style={styles.logo} resizeMode="contain" />
         <Text style={styles.h1}>Welcome back,{'\n'}Royal Family</Text>
         <Text style={styles.sub}>Chino's indoor adventure park</Text>
         <View style={styles.btnRow}>
