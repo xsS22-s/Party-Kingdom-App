@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { colors, radius } from '../theme/colors';
-
-const logo = require('../assets/logo.png');
+import { LOGO_DATA_URI } from '../assets/imageData';
 
 export function PageHeader({ eyebrow, title, onBack, showLogo }) {
   return (
@@ -18,7 +17,7 @@ export function PageHeader({ eyebrow, title, onBack, showLogo }) {
           <Text style={styles.headerTitle}>{title}</Text>
         </View>
       </View>
-      {showLogo && <Image source={logo} style={styles.smallLogo} resizeMode="contain" />}
+      {showLogo && <Image source={{ uri: LOGO_DATA_URI }} style={styles.smallLogo} resizeMode="contain" />}
     </View>
   );
 }
