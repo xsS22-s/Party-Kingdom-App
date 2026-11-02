@@ -11,6 +11,10 @@
     },
     "android": {
       "package": "com.partykingdomchino.app"
-    }
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-notifications"
+    ]
   }
 }
