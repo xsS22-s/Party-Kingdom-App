@@ -6,6 +6,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colors } from '../theme/colors';
 
 import HomeScreen from '../screens/HomeScreen';
+import VisitsScreen from '../screens/VisitsScreen';
+import AccountScreen from '../screens/AccountScreen';
 import BookScreen from '../screens/BookScreen';
 import WaiverScreen from '../screens/WaiverScreen';
 import OpenJumpScreen from '../screens/OpenJumpScreen';
@@ -16,7 +18,7 @@ import FieldTripsScreen from '../screens/FieldTripsScreen';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-const TAB_ICONS = { Home: '🏠', Book: '🎟️', Waiver: '📜' };
+const TAB_ICONS = { Home: '🏠', Book: '🎟️', Waiver: '📜', Visits: '📅', Account: '👤' };
 
 function Tabs() {
   return (
@@ -32,6 +34,8 @@ function Tabs() {
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Book" component={BookScreen} options={{ title: 'Book' }} />
       <Tab.Screen name="Waiver" component={WaiverScreen} />
+      <Tab.Screen name="Visits" component={VisitsScreen} options={{ title: 'My Visits' }} />
+      <Tab.Screen name="Account" component={AccountScreen} />
     </Tab.Navigator>
   );
 }

@@ -62,9 +62,6 @@ export default function LilyPadWebView({ source, title, onClose }) {
     setFailed(true);
   };
 
-  // Display the actual host without exposing query parameters or requiring URL polyfills.
-  const host = currentUrl.match(/^https:\/\/([^/?#]+)/i)?.[1] || 'LilyPad';
-
   return (
     <View style={styles.container}>
       <View style={[styles.header, { paddingTop: Math.max(insets.top, 12) }]}>
@@ -77,7 +74,6 @@ export default function LilyPadWebView({ source, title, onClose }) {
             <Text style={styles.controlText}>Close</Text>
           </TouchableOpacity>
         </View>
-        <Text style={styles.host} numberOfLines={1}>{host}</Text>
       </View>
 
       <View style={styles.webArea}>
@@ -141,7 +137,6 @@ const styles = StyleSheet.create({
   control: { minHeight: 44, minWidth: 48, justifyContent: 'center', alignItems: 'center' },
   controlText: { color: colors.white, fontSize: 14, fontWeight: '700' },
   title: { flex: 1, textAlign: 'center', color: colors.white, fontSize: 18, fontWeight: '800' },
-  host: { color: '#D9CCFF', textAlign: 'center', fontSize: 12 },
   webArea: { flex: 1 },
   webview: { flex: 1, backgroundColor: colors.white },
   loading: { position: 'absolute', top: 0, left: 0, right: 0, padding: 12, backgroundColor: colors.mist, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 10 },
