@@ -45,13 +45,13 @@ export default function TeamPartiesScreen({ navigation }) {
         />
 
         <View style={{ marginTop: 20 }}>
-          <PrimaryButton label="Reserve a Team Party Room" variant="gold" onPress={() => navigation.navigate('Book')} />
+          <PrimaryButton label="Reserve a Team Party Room" variant="gold" onPress={() => navigation.navigate('Main', { screen: 'Book' })} />
         </View>
         <View style={{ marginTop: 10 }}>
           <PrimaryButton
             label="Sign the waiver first"
             variant="outline"
-            onPress={() => navigation.navigate('Waiver')}
+            onPress={() => navigation.navigate('Main', { screen: 'Waiver' })}
           />
         </View>
       </View>
