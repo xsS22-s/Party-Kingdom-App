@@ -73,7 +73,7 @@ export default function OpenJumpScreen({ navigation }) {
             <PrimaryButton
               label="Sign the waiver first"
               variant="outline"
-              onPress={() => navigation.navigate('Waiver')}
+              onPress={() => navigation.navigate('Main', { screen: 'Waiver' })}
             />
           </View>
         </View>
