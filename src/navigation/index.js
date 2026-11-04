@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colors } from '../theme/colors';
 
@@ -16,7 +16,7 @@ import TeamPartiesScreen from '../screens/TeamPartiesScreen';
 import FieldTripsScreen from '../screens/FieldTripsScreen';
 
 const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const TAB_ICONS = { Home: '🏠', Book: '🎟️', Waiver: '📜', Visits: '📅', Account: '👤' };
 
